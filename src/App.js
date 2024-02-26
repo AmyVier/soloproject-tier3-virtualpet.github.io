@@ -24,12 +24,33 @@ class PetInfoBar extends React.Component {
 
     render() {
       let style = {
-        backgroundColor: "DodgerBlue",
+        backgroundColor: this.props.color,
         height: "20px",
         width: `${this.state.dynamicVariable}px`
       };
-        return <div style={style}> </div>;
+        return (<div style={style}> </div>);
     }
+}
+
+function HungerBar() {
+  return (<div class = "DynamicVariable">
+    <h1>Hunger: </h1>
+    <PetInfoBar color="brown" />
+    </div>);
+}
+
+function HealthBar() {
+  return (<div class = "DynamicVariable">
+    <h1>Health: </h1>
+    <PetInfoBar color="forestgreen" />
+    </div>);
+}
+
+function HappinessBar() {
+  return (<div class = "DynamicVariable">
+    <h1>Happiness: </h1>
+    <PetInfoBar color="orchid" />
+    </div>);
 }
 
 export default PetInfoBar;
