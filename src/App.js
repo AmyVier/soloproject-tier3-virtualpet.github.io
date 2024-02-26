@@ -53,4 +53,4 @@ function HappinessBar() {
     </div>);
 }
 
-export default PetInfoBar;
+export {HungerBar, HealthBar, HappinessBar};
